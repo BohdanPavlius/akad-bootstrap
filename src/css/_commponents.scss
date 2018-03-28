@@ -1,0 +1,78 @@
+.title {
+	text-transform: uppercase;
+	font-size: 30px;
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+	padding: 20px 0;
+	z-index: 2;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 18px;
+			left: -1px;
+			height: 20px;
+			width: 70px;
+			background-color: $color_high;
+			z-index: -1;
+
+		}
+}
+
+.title-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+
+}
+
+.text {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.cta-button {
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: $color_high;
+	font-weight: 700;
+	padding: 0 46px;
+	border: 1px solid $color_high;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	cursor: pointer;
+
+
+		&:hover {
+			color: rgba(0, 0, 0, 0.5);
+			text-decoration: none;
+			background-color: #fff;
+		}
+
+	&--lights {
+		background-color: #fff;
+		color: $color_high;
+	}
+}
+
+.carousel-indicators {
+	bottom: -45px;
+}
+
+.carousel-indicators li {
+	background-color: $color_main;
+	height: 4px;
+	width: 17px;
+	cursor: pointer;
+}
+
+.carousel-indicators .active {
+	background-color: $color_high;
+	width: 30px;
+}

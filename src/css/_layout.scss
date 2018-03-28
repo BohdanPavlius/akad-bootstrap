@@ -1,0 +1,48 @@
+.section {
+	padding-top: 40px;
+
+	@include _media(lg) {
+		padding-top: 150px;
+	}
+}
+
+.margin-bottom {
+	margin-bottom: 20px; 
+
+	@include _media(lg) {
+		margin-bottom: 95px;
+	}
+}
+
+.section-wrapper {
+	@include make-row();
+}
+
+.section-title-wrapper {
+	@include make-col-ready();
+	@include make-col(10);
+	@include make-col-offset(1);
+
+	text-align: center;
+
+	@include media-breakpoint-up(lg);
+		@include make-col(8);
+		@include make-col-offset(2);
+}
+
+.breadcrumb {
+	justify-content: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	font-family: 'Monserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+
+	a {
+		color: $color_main;
+
+		&:hover {
+			color: $color_main;
+		}
+	}
+}

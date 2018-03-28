@@ -1,0 +1,180 @@
+.footer-bg-color {
+	background-color: $color_high;
+}
+
+.footer-common {
+	@include make-container();
+	@include make-container-max-widths();
+	padding-top: 50px;
+	padding-bottom: 50px;
+	
+	&__left-block {
+		@include make-col-ready();
+			@include make-col(12);
+
+			margin-bottom: 20px;
+
+			@include media-breakpoint-up(md) {
+			@include make-col(6);
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 48px;
+		color: #fff;
+		text-transform: uppercase;
+
+
+	}
+
+	&__right-block {
+		@include make-col-ready();
+			@include make-col(12);
+
+			@include media-breakpoint-up(md) {
+			@include make-col(6);
+		}
+	}
+	
+}
+
+.footer-form {
+	padding: 25px 20px;
+	background-color: #fff;
+	font-size: 0;
+
+	&__title {
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	p {
+		font-size: 16px;
+		color: #999999;
+		line-height: 24px;
+		margin-bottom: 30px;
+	}
+
+
+	input[type=email] {
+		apperance: none;
+		border-radius: 0;
+
+
+		border: 1px solid #999999;
+		border-right-color: $color_high;
+		height: 50px;
+		line-height: 48px;
+		padding: 0 18px;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 700;
+
+		display: inline-block;
+		vertical-align: middle;
+		outline: none;
+		width: calc(100% - 135px);
+
+		@include placeholder {
+			color: #cdcdcd;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+		}
+	}
+
+	&__button {
+		appearance: none;
+		width: 135px;
+		cursor: pointer;
+		border: none;
+		vertical-align: bottom;
+	}
+
+}
+
+.footer-main {
+	@include make-container();
+	@include make-container-max-widths();
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__menu {
+		@include make-col-ready();
+			@include make-col(12);
+
+			list-style: none;
+			
+
+			@include media-breakpoint-up(md) {
+				@include make-col(7);
+			}
+
+
+			&-item {
+				display: inline-block;
+				position: relative;
+
+				&:not(:last-child) {
+					padding-right: 40px;
+
+
+				&:after {
+					content: '';
+					position: absolute;
+					height: 2px;
+					width: 4px;
+					background-color: #cdcdcd;
+					top: 50%;
+					right: 18px;
+
+					}
+				}
+
+
+
+			}
+
+			a {
+					text-transform: uppercase;
+					font-size: 14px;
+					color: #9a9a9a;
+				}
+	}
+
+	&__right-block {
+		@include make-col-ready();
+			@include make-col(12);
+
+			@include media-breakpoint-up(md) {
+				@include make-col(5);
+			}
+
+
+	}
+
+	&__copy {
+		text-align: right;
+		text-transform: uppercase;
+		color: #9a9a9a;
+		font-size: 14px;
+	}
+
+	&__social {
+		text-align: right;
+
+			a {
+				display: inline-block;
+				font-size: 18px;
+				color: #999999;
+				padding: 0 0 0 15px;
+
+				&:hover {
+					color: $color_high;
+				}
+			}
+		
+	}
+
+}
